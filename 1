@@ -1,0 +1,51 @@
+# agenda1
+proyecto de programaciónxd
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string line = "";
+		string[] nombre= new string[4];
+		int[] celular= new int[4];
+		string[] correo= new string[4];
+		
+		for (int i=0; i<4; i++)
+		{
+			Console.Write("ingrese nombre: ");
+			nombre[i] = Console.ReadLine();
+			Console.Write("ingrese celular: ");
+			line = Console.ReadLine();
+			celular[i] = int.Parse(line);
+			Console.Write("ingrese el correo: ");
+			correo[i] = Console.ReadLine();
+			
+		}	
+		for (int x = 0; x < 4; x++)
+		{
+			Console.WriteLine("nombre: "+nombre[x] + " celular: " + celular[x] + " correo: " + correo[x]);
+		}
+
+		Console.Write("ingresa el nombre a buscar:  ");
+		line=Console.ReadLine();
+		
+		string consulta = "usuario no encontrado";
+		
+		for (int i= 0; i < 4; i++)
+		{
+			if(nombre[i] == line)
+			consulta= "nombre: "+nombre[i] + " celular: " + celular[i] + " correo: " + correo[i];
+			nombre[i] = "	";		
+			celular[i] = 0;
+			correo[i] = " ";
+			
+			nombre[i] = "nuevo nombre	";		
+			celular[i] = 00000;
+			correo[i] = "nuevo correo ";
+			
+		}	
+		Console.Write(consulta);
+			
+	}
+}
